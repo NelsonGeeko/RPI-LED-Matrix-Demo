@@ -3,34 +3,34 @@
 Ongoing Repo to document LED Matrix Demo, to be converted into K8s Demo for Digital Signage.
 
 ## Components needed
-Single RPI - Prefer RPI 4, but my orgiginal testing of the LED Matrix was PI 3 B+ with WiFi. 
-<br>
-<br>
-Waveshare 64x64 Matrix pannel
-<br>
-<br>
-5v 4A Power supply - I used a bench PSU for testing, LED pannel can consume a lot of current especially if you choose to Daisy chain
-<br>
-<br>
-optional PI Hat - I did not use one, i used official GPIO mapping to the RPI (Mapping can be found at the bottom of this page.
-<br>
-<br>
-## Libs needed
-I used the hzeller/rpi-rgb-led-matrix libary for initial testing 
+Single RPI - Prefer RPI 4, but my orgiginal testing of the LED Matrix was PI 3 B+ with WiFi. <br>
+https://thepihut.com/products/raspberry-pi-4-model-b?variant=31994565689406
 
+Waveshare 64x64 Matrix pannel<br>
+https://www.waveshare.com/rgb-matrix-p3-64x64.htm
+
+5v 4A Power supply - I used a bench PSU for testing, LED pannel can consume a lot of current especially if you choose to Daisy chain.<br>
+https://thepihut.com/products/mean-well-5v-4a-20w-power-supply-gst25a05-p1j?variant=41611596562627&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwu4WoBhBkEiwAojNdXm2bPy5dsB9RV-EqaoIY3luF8vK2_lJJ9ZjYkhK2vhTdz7JpFWXgmBoCCFwQAvD_BwE
+
+optional PI Hat - I did not use one, i used official GPIO mapping to the RPI (Mapping can be found at the bottom of this page.<br>
+https://thepihut.com/products/adafruit-rgb-matrix-bonnet-for-raspberry-pi-ada3211
+
+
+## Libs needed
+I used the hzeller/rpi-rgb-led-matrix libary for initial testing.<br>
 https://github.com/hzeller/rpi-rgb-led-matrix/tree/master
 
 ```shell
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
 ```
 
-To display images, GIFs or Videos with the hzeller lib you will need to install `libgraphicsmagick++-dev` and `libweb-dev`
+To display images, GIFs or Videos with the hzeller lib you will need to install `libgraphicsmagick++-dev` and `libweb-dev`.
 
 ## Python Scripts
 
 As a part of the hzeller Liberary it will come with Python coomponents, these are loacted at `/bindings/python` within this dir there are samples to test and try.
 
-To ensure that this works you will need to install python on the Pi
+To ensure that this works you will need to install python on the Pi.
 
 ```shell
 sudo apt-get update && sudo apt-get install python3-dev python3-pillow -y
