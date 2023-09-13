@@ -3,18 +3,17 @@
 Ongoing Repo to document LED Matrix Demo, to be converted into K8s Demo for Digital Signage.
 
 ## Components needed
-Single RPI - Prefer RPI 4, but my orgiginal testing of the LED Matrix was PI 3 B+ with WiFi. <br>
+#### Single RPI - Prefer RPI 4, but my orgiginal testing of the LED Matrix was PI 3 B+ with WiFi.
 https://thepihut.com/products/raspberry-pi-4-model-b?variant=31994565689406
 
-Waveshare 64x64 Matrix pannel<br>
+#### Waveshare 64x64 Matrix pannel.
 https://www.waveshare.com/rgb-matrix-p3-64x64.htm
 
-5v 4A Power supply - I used a bench PSU for testing, LED pannel can consume a lot of current especially if you choose to Daisy chain.<br>
+#### 5v 4A Power supply - I used a bench PSU for testing, LED pannel can consume a lot of current especially if you choose to Daisy chain.
 https://thepihut.com/products/mean-well-5v-4a-20w-power-supply-gst25a05-p1j?variant=41611596562627&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwu4WoBhBkEiwAojNdXm2bPy5dsB9RV-EqaoIY3luF8vK2_lJJ9ZjYkhK2vhTdz7JpFWXgmBoCCFwQAvD_BwE
 
-optional PI Hat - I did not use one, i used official GPIO mapping to the RPI (Mapping can be found at the bottom of this page.<br>
+#### Optional PI Hat - I did not use one, I used official GPIO mapping to the RPI (Mapping can be found at the bottom of this page.
 https://thepihut.com/products/adafruit-rgb-matrix-bonnet-for-raspberry-pi-ada3211
-
 
 ## Libs needed
 I used the hzeller/rpi-rgb-led-matrix libary for initial testing.<br>
