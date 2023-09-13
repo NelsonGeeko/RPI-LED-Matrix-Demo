@@ -79,3 +79,6 @@ chains have all icons.
 |              :boom:   **[2] R2** |  35 |  36 | **[3] G2** :droplet:
 |              :droplet:**[3] R2** |  37 |  38 | **[2] B2** :boom:
 |                              -   |  39 |  40 | **[3] B2** :droplet:
+
+![image](https://github.com/NelsonGeeko/RPI-LED-Matrix-Demo/assets/93192501/027b8ae5-99fd-4afb-8a99-7e48853a2228)
+
