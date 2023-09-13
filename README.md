@@ -79,5 +79,6 @@ chains have all icons.
 |              :boom:   **[2] R2** |  35 |  36 | **[3] G2** :droplet:
 |              :droplet:**[3] R2** |  37 |  38 | **[2] B2** :boom:
 |                              -   |  39 |  40 | **[3] B2** :droplet:
+
 ![Alt text](/assets/RGB-Matrix-P2-64x6408.jpg)
 
