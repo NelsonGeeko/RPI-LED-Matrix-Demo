@@ -16,18 +16,32 @@ optional PI Hat - I did not use one, i used official GPIO mapping to the RPI (Ma
 <br>
 <br>
 ## Libs needed
-I used the hzeller/rpi-rgb-led-matrix libary for initial testing <br>
+I used the hzeller/rpi-rgb-led-matrix libary for initial testing 
+
 https://github.com/hzeller/rpi-rgb-led-matrix/tree/master
 
-<br>
+```shell
+git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
+```
+
 To display images, GIFs or Videos with the hzeller lib you will need to install `libgraphicsmagick++-dev` and `libweb-dev`
-<br>
-<br>
+
+## Python Scripts
+
+As a part of the hzeller Liberary it will come with Python coomponents, these are loacted at `/bindings/python` within this dir there are samples to test and try.
+
+To ensure that this works you will need to install python on the Pi
+
+```shell
+sudo apt-get update && sudo apt-get install python3-dev python3-pillow -y
+make build-python PYTHON=$(command -v python3)
+sudo make install-python PYTHON=$(command -v python3)
+```
+Currently, this GH Repo has a script to run a single image, the plan is to make this configurable using env varibles, and to roll out deployments using Helm and CD.
+
 ## Note for using GPIO output without hat
-<br>
 If you are using the hzeller lib, commands to run some of the demos and Utils will require `--led-rows=64`, `led-cols=64` and `led-no-hardware-pulse` flags set.
 
-<br>
 
 ### GPIO Mapping for RPI
 
