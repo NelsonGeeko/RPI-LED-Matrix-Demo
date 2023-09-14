@@ -33,6 +33,7 @@ To ensure that this works you will need to install python on the Pi.
 
 ```shell
 sudo apt-get update && sudo apt-get install python3-dev python3-pillow -y
+cd rpi-rgb-led-matrix/
 make build-python PYTHON=$(command -v python3)
 sudo make install-python PYTHON=$(command -v python3)
 ```
