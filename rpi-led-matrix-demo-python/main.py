@@ -23,7 +23,7 @@ options.gpio_slowdown = 3
 matrix = RGBMatrix(options = options)
 
 # Open image, resize and convert to RGB for Display.
-image = Image.open('rancher_prime.jpg')
+image = Image.open('rancher_prime.JPG')
 image.thumbnail((matrix.width, matrix.height), Image.ANTIALIAS)
 # Display Image on Matrix
 matrix.SetImage(image.convert('RGB'))
