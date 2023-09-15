@@ -42,11 +42,10 @@ Currently, this GH Repo has a script to run a single image, the plan is to make 
 ## Container Image
 To make ease of rollout a little easier, I have created a Container Image based on SLE BCI to run the LED matrix on Raspberry PI with included assets. Future iterations of this Docker image will include Enviroment Varibles.
 Make sure that you run the container with the `--privileged` flag, this is so the container has access to the GPIO pins of the Pi.
-`docker run --privileged nelsongeeko/led-matrix:latest`
-
-## Note for using GPIO output without hat
-If you are using the hzeller lib, commands to run some of the demos and Utils will require `--led-rows=64`, `led-cols=64` and `led-no-hardware-pulse` flags set.
-
+```shell
+docker run --privileged nelsongeeko/led-matrix:latest
+```
+The way this Image is architected means that it will pull the latest version of this GH repo and run the scripts within, this has specific applications for CD Demos that I can envison, however if you require a static image with set version of this code, this can be provided.
 
 ### GPIO Mapping for RPI
 
@@ -87,4 +86,7 @@ chains have all icons.
 |                              -   |  39 |  40 | **[3] B2** :droplet:
 
 ![Alt text](/assets/RGB-Matrix-P2-64x6408.jpg)
+
+## Note for using GPIO output without hat
+If you are using the hzeller lib, commands to run some of the demos and Utils will require `--led-rows=64`, `led-cols=64` and `led-no-hardware-pulse` flags set.
 
