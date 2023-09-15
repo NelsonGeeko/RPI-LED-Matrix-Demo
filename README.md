@@ -40,7 +40,9 @@ sudo make install-python PYTHON=$(command -v python3)
 Currently, this GH Repo has a script to run a single image, the plan is to make this configurable using env varibles, and to roll out deployments using Helm and CD.
 
 ## Container Image
-To make ease of rollout a little easier, I have created a Container Image based on SLE BCI to run the LED matrix on Raspberry PI with included assets. Future iterations of this Docker image will include Enviroment Varibles 
+To make ease of rollout a little easier, I have created a Container Image based on SLE BCI to run the LED matrix on Raspberry PI with included assets. Future iterations of this Docker image will include Enviroment Varibles.
+Make sure that you run the container with the `--privileged` flag, this is so the container has access to the GPIO pins of the Pi.
+`docker run --privileged nelsongeeko/led-matrix:latest`
 
 ## Note for using GPIO output without hat
 If you are using the hzeller lib, commands to run some of the demos and Utils will require `--led-rows=64`, `led-cols=64` and `led-no-hardware-pulse` flags set.
