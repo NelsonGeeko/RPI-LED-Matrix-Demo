@@ -1,0 +1,18 @@
+FROM registry.suse.com/bci/python:3.6
+CMD ["/bin/bash"]
+WORKDIR Led-Python/
+COPY main.py /Led-Python
+COPY rancher_prime.jpg /Led-Python
+RUN zypper -n install suseconnect-ng
+RUN SUSEConnect -r INTERNAL-USE-ONLY-040f-00c9
+RUN SUSEConnect -d -p sle-module-server-applications/15.5/aarch64
+RUN SUSEConnect -p PackageHub/15.5/aarch64
+WORKDIR /
+RUN zypper -n --no-gpg-checks install GraphicsMagick make cmake gcc-c++
+RUN pip3 install Pillow
+RUN git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
+WORKDIR /rpi-rgb-led-matrix
+RUN make build-python PYTHON=$(command -v python3)
+RUN make install-python PYTHON=$(command -v python3)
+WORKDIR /Led-Python/
+CMD ["python3", "./main.py"]
