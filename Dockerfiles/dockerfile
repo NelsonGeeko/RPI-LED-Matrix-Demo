@@ -1,8 +1,7 @@
 FROM registry.suse.com/bci/python:3.6
 CMD ["/bin/bash"]
 WORKDIR Led-Python/
-COPY main.py /Led-Python
-COPY rancher_prime.jpg /Led-Python
+COPY . /Led-Python
 RUN zypper -n install suseconnect-ng
 RUN SUSEConnect -r INTERNAL-USE-ONLY-040f-00c9
 RUN SUSEConnect -d -p sle-module-server-applications/15.5/aarch64
