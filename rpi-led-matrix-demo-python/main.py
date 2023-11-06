@@ -1,8 +1,12 @@
 import time
+import os
 
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
+imageVar = os.getenv('IMAGE')
+
+print(imageVar)
 # config for matrix
 options = RGBMatrixOptions()
 # configure for display settings, Script is set to 64x64 but can be overriden using --led-rows and --led-cols flags
@@ -23,7 +27,7 @@ options.gpio_slowdown = 3
 matrix = RGBMatrix(options = options)
 
 # Open image, resize and convert to RGB for Display.
-image = Image.open('rancher_prime.JPG')
+image = Image.open(imageVar)
 image.thumbnail((matrix.width, matrix.height), Image.ANTIALIAS)
 # Display Image on Matrix
 matrix.SetImage(image.convert('RGB'))
