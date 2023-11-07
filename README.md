@@ -37,15 +37,22 @@ cd rpi-rgb-led-matrix/
 make build-python PYTHON=$(command -v python3)
 sudo make install-python PYTHON=$(command -v python3)
 ```
-Currently, this GH Repo has a script to run a single image, the plan is to make this configurable using env varibles, and to roll out deployments using Helm and CD.
-
 ## Container Image
-To make ease of rollout a little easier, I have created a Container Image based on SLE BCI to run the LED matrix on Raspberry PI with included assets. Future iterations of this Docker image will include Enviroment Varibles.
+To make ease of rollout a little easier, I have created a Container Image based on SLE BCI to run the LED matrix on Raspberry PI with included assets.
 Make sure that you run the container with the `--privileged` flag, this is so the container has access to the GPIO pins of the Pi.
 ```shell
 docker run --privileged nelsongeeko/led-matrix:latest
 ```
-The way this Image is architected means that it will pull the latest version of this GH repo and run the scripts within, this has specific applications for CD Demos that I can envison, however if you require a static image with set version of this code, this can be provided.
+
+As of the 7/11/2023, the Container image version 0.6 can accept enviromental varibles to change what is displayed. Currently the the Contianer image has the assets included within to be defined, this is due to images needing to be exactly square for the 64x64 display.
+
+To utalise the enviroment varibles on Docker run:
+```shell
+docker run --privileged -e "IMAGE=<image>.jpg" nelsongeeko/led-matrix:0.6
+```
+Current images that are included in the docker image are in `rpi-led-matrix-demo-python/`.
+
+This does now mean that I have created a `deployment.yaml` which I have tested on `K3s 1.27.6`. the `deployemnt.yaml` file is availible in this repository.
 
 ### GPIO Mapping for RPI
 
