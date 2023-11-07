@@ -74,7 +74,7 @@ chains have all icons.
 |                             -    |   1 |   2 | -
 |             :droplet: **[3] G1** |   3 |   4 | -
 |             :droplet: **[3] B1** |   5 |   6 | **GND** :smile::boom::droplet:
-|:smile::boom::droplet: **strobe** |   7 |   8 | **[3] R1** :droplet:
+|:smile::boom::droplet: **LAT** |   7 |   8 | **[3] R1** :droplet:
 |                              -   |   9 |  10 | **E**    :smile::boom::droplet: (for 64 row matrix, 1:32)
 |:smile::boom::droplet: **clock**  |  11 |  12 | **OE-**  :smile::boom::droplet:
 |              :smile:  **[1] G1** |  13 |  14 | -
