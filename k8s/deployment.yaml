@@ -20,4 +20,8 @@ spec:
           env:
             - name: IMAGE
               value: prime.jpg
+            - name: BRIGHT
+              value: 70
+            - name: HERTZ
+              value: 70
           
