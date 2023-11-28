@@ -5,6 +5,8 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 
 imageVar = os.getenv('IMAGE',default="prime.jpg")
+brightVar = int(os.getenv('BRIGHT', default=100))
+hzVar = int(os.getenv('HERTZ', default=70))
 
 print(imageVar)
 # config for matrix
@@ -14,11 +16,11 @@ options.rows = 64
 options.cols = 64
 options.chain_length = 1
 options.parallel = 1
-options.brightness=100
+options.brightness=brightVar
 options.drop_privileges=False
 options.pwm_bits=11
 options.show_refresh_rate=True
-options.limit_refresh_rate_hz=70
+options.limit_refresh_rate_hz=hzVar
 options.disable_hardware_pulsing=True
 # mapping used for GPIO pins for RPI, if using Hat or Bonnet set options from documentation
 options.hardware_mapping = 'regular'
