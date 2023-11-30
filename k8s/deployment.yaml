@@ -19,6 +19,6 @@ spec:
             privileged: true
           env:
             - name: IMAGE
-              value: academy.jpg
+              value: prime.jpg
             - name: BRIGHT
               value: "70"
