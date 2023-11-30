@@ -20,4 +20,5 @@ spec:
           env:
             - name: IMAGE
               value: suse.jpg
-          
+            - name: BRIGHT
+              value: "70"
