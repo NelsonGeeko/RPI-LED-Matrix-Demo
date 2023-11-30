@@ -19,5 +19,5 @@ spec:
             privileged: true
           env:
             - name: IMAGE
-              value: academy.jpg
+              value: suse.jpg
           
