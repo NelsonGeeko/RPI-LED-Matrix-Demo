@@ -22,3 +22,5 @@ spec:
               value: suse.jpg
             - name: BRIGHT
               value: "70"
+            - name: HERTZ
+              value: "40"
