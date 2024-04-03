@@ -3,7 +3,7 @@ CMD ["/bin/bash"]
 WORKDIR Led-Python/
 COPY . /Led-Python
 RUN zypper -n install suseconnect-ng
-RUN SUSEConnect -r INTERNAL-USE-ONLY-040f-00c9
+RUN SUSEConnect -r 
 RUN SUSEConnect -d -p sle-module-server-applications/15.5/aarch64
 RUN SUSEConnect -p PackageHub/15.5/aarch64
 WORKDIR /
